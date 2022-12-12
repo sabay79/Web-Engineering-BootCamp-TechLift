@@ -1,9 +1,10 @@
 ﻿//2D Array - 6x6 Hourglass sum
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace W2D1T2
+namespace WE_PF_Assignment_04_2DArray
 {
     internal class Program
     {
@@ -11,8 +12,8 @@ namespace W2D1T2
         {
             List<int> sums = new List<int>();
 
-            for( int i = 1; i < 5; i++)
-                for(int j = 1; j < 5; j++)
+            for (int i = 1; i < 5; i++)
+                for (int j = 1; j < 5; j++)
                 {
                     int sum = arr[i - 1][j - 1] + arr[i - 1][j] + arr[i - 1][j + 1]
                                                 + arr[i][j]
@@ -37,3 +38,4 @@ namespace W2D1T2
         }
     }
 }
+
