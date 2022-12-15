@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Personal Details</title>
+<link rel="stylesheet" href="personal_details_styles.css">
+<link rel = "icon" href="/media/hec_logo.png" type = "image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <tr>
+                <h3>Tell us about Yourself!</h3>
+            </tr>
+            <div class="row">
+                <div class="column">
+                    <tr>
+                        <div class="dropdown">
+                            <td><label for="title">Title</label></td>
+                            <td>
+                                <select id="title" name="title" required>
+                                    <option value="Dr.">Dr.</option>
+                                    <option value="Engr.">Engr.</option>
+                                    <option value="Mr.">Mr.</option>
+                                    <option value="Ms.">Ms.</option>
+                                    </select>     
+                            </td>             
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="textbox">
+                            <td><label for="fname">First Name</label></td>
+                            <td><input type="text" id="fname" name="firstname" placeholder="First name.." required></td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="textbox">
+                            <td><label for="mname">Middle Name</label></td>
+                            <td><input type="text" id="mname" name="middlename" placeholder="Middle name.."></td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="textbox">
+                            <td><label for="lname">Last Name</label></td>
+                            <td><input type="text" id="lname" name="lastname" placeholder="Last name.." required></td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="textbox">
+                            <td><label for="fullname">Full Name</label></td>
+                            <td><input type="text" id="fullname" name="fullname" readonly></td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="radiobut">
+                            <td><label for="maritalstatus">Marital Status</label></td>
+                            <td>
+                                <input type="radio" id="single" name="maritialstatus" value="Single">
+                                <label for="maritialstatus">Single</label><br>
+
+                                <input type="radio" id="widowed" name="maritialstatus" value="Widowed">
+                                <label for="maritialstatus">Widowed</label><br>
+
+                                <input type="radio" id="married" name="maritialstatus" value="Married">
+                                <label for="maritialstatus">Married</label><br>
+
+                                <input type="radio" id="divorced" name="maritialstatus" value="Separated/Divorced">
+                                <label for="maritialstatus">Separated/Divorced</label>
+                            </td>   
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="radiobut">
+                            <td><label for="gender">Gender</label></td>
+                            <td>
+                                <input type="radio" id="female" name="gender" value="Female">
+                                <label for="gender">Female</label>
+
+                                <input type="radio" id="male" name="gender" value="Male">
+                                <label for="gender">Male</label>
+
+                                <input type="radio" id="other" name="gender" value="Other">
+                                <label for="gender">Other</label>
+                            </td>   
+                        </div>
+                    </tr>
+                </div>
+
+                <div class="column">
+                    <tr>
+                        <div id="display_image"></div><br>
+                        <input type="file" id="image_input" name="img" accept="image/png, image/jpg">
+                        <br><br>
+                        <button id="upload_but">UPLOAD</button>
+                        <button id="delete_but">DELETE</button>
+                    </tr>
+                </div>
+            </div>
+
+            <tr>
+                <h3>Biographical Information</h3>
+            </tr>
+            <div class="row">
+                <div class="column">
+                    <tr>
+                        <div class="dateinput">
+                            <td><label for="birthday">Date of Birth</label></td>
+                            <input type="date" id="birthday" name="birthday" required>
+                        </div>                    
+                    </tr>
+                    <tr>
+                        <div class="dropdown">
+                            <td><label for="country">Country of Birth</label></td>
+                            <td>
+                                <select id="country" name="country" required>
+                                    <option value="Pakistan">Pakistan</option>
+                                </select>     
+                            </td>             
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="dropdown">
+                            <td><label for="religion">Religion</label></td>
+                            <td>
+                                <select id="religion" name="religion" required>
+                                    <option value="Islam">Islam</option>
+                                    <option value="Other">Other</option>
+                                </select>     
+                            </td>             
+                        </div>
+                    </tr>
+                </div>
+                <div class="column">
+                    <tr>
+                        <div class="dropdown">
+                            <td><label for="province">Domicile Province</label></td>
+                            <td>
+                                <select id="province" name="province" required>
+                                    <option value="Azad Jammu & Kashmir">Azad Jammu & Kashmir</option>
+                                    <option value="Balochistan">Balochistan</option>
+                                    <option value="Gilgit-Balitistan">Gilgit-Balitistan</option>
+                                    <option value="Islamabad">Islamabad</option>
+                                    <option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Sindh">Sindh</option>
+                                </select>     
+                            </td>             
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="dropdown">
+                            <td><label for="city">Domicile City</label></td>
+                            <td>
+                                <select id="city" name="city" required>
+                                    <option value="Islamabad">Islamabad</option>
+                                    <option value="Rawalpindi">Rawalpindi</option>
+                                    <option value="Lahore">Lahore</option>
+                                    <option value="Karachi">Karachi</option>
+                                </select>     
+                            </td>             
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="dropdown">
+                            <td><label for="district">Domicile District</label></td>
+                            <td>
+                                <select id="district" name="district" required>
+                                    <option value="Islamabad">Islamabad</option>
+                                    <option value="Rawalpindi">Rawalpindi</option>
+                                    <option value="Lahore">Lahore</option>
+                                    <option value="Karachi">Karachi</option>
+                                </select>     
+                            </td>             
+                        </div>
+                    </tr>
+                </div>
+            </div>
+
+            <tr>
+                <h3>National ID</h3>
+            </tr>
+            <div class="row">
+                <table>
+                    <tr>
+                        <th>Country</th>
+                        <th>Type</th>
+                        <th>Identification Number</th>    
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="dropdown">
+                                    <select id="country" name="country">
+                                        <option value="Pakistan">Pakistan</option>
+                                    </select>     
+                            </div>    
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <select id="idtype" name="idtype">
+                                    <option value="B-Form">B-Form</option>
+                                    <option value="CNIC">CNIC</option>
+                                    <option value="NTN">NTN</option>
+                                    <option value="Passport">Passport</option>
+                                </select>     
+                        </div>    
+                        </td>
+                        <td>
+                            <input type="text" id="id" name="idnumber">
+                        </td>
+                    </tr>
+                </table>
+                <button>+</button>
+                <button>Click to Add</button>
+            </div>
+
+            <tr>
+                <h3>Father's Information</h3>
+            </tr>
+            <div class="row">
+                <div class="column">
+                    <tr>
+                        <div class="textbox">
+                            <td><label for="fathername">Father's Name</label></td>
+                            <td><input type="text" id="fathername" name="fathername" placeholder="Father Name.." required></td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="textbox">
+                            <td><label for="CNIC">CNIC</label></td>
+                            <td><input type="text" id="CNIC" name="CNIC" placeholder="XXXXX-XXXXXXX-X" required></td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="radiobut">
+                            <td><label for="fatherstatus">Status</label></td>
+                            <td>
+                                <input type="radio" id="alive" name="fatherstatus" value="Alive">
+                                <label for="fatherstatus">Alive</label>
+
+                                <input type="radio" id="male" name="fatherstatus" value="Decreased">
+                                <label for="fatherstatus">Decreased</label>
+                            </td>   
+                        </div>
+                    </tr>
+                </div>
+                <div class="column">
+                    <tr>
+                        <div class="dropdown">
+                            <td><label for="fatheroccupation">Occupation</label></td>
+                            <td>
+                                <select id="fatheroccupation" name="fatheroccupation" required>
+                                    <option value="Data Analyst">Data Analyst</option>
+                                    <option value="Web Developer">Web Developer</option>
+                                    <option value="Web Engineer">Web Engineer</option>
+                                    </select>     
+                            </td>             
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="checkbox">
+                            <input type="checkbox" id="employed" name="employed">
+                            <label for="employed">Currently Employed</label><br>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+
+            <button>SAVE & CLOSE</button>
+            <button>NEXT</button>
+        </form>
+      </div>
+      <script src="personal_details_script.js"></script>
+    </body>
+</html>

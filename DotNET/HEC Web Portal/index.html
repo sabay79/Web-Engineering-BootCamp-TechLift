@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="script.js"></script>
+
+    <link rel = "icon" href="/media/hec_logo.png" type = "image/x-icon">
+    <title>HEC Online Portal</title>
+</head>
+
+<body>
+    <table style="width:100%">
+        <tr>
+            <td id="logo"><img src="/media/hec_logo.png" alt="HEC"></td>
+            <td style="width: 86%;">
+                <h2><a id="name" href="https://eportal.hec.gov.pk/hec-portal-web/auth/login.jsf">Higher Education Commission, Pakistan</a></h2>
+                <p>Facilitating Institutes of Higher Learning to serve as an Engine of Growth for the Socio-Economic Development of Pakistan</p>
+            </td>
+            <td id="c_name">SABA YASHFEEN    </td>
+            <td><img class="avatar" src="/media/girl_avatar.png" alt="&#128512"></td>
+            
+            <td><img class="dArrow" src="/media/down-arrow.svg" alt="&#8595"></td>
+        </tr>
+    </table>
+
+    <h4>My Profile</h4>
+
+    <div class="tablink">
+        <button onclick="openPage('personal_details.html')" id="defaultOpen">Personal Details</button>
+        <button onclick="openPage('contact.html')">Contact</button>
+        <button onclick="openPage('education.html')">Education</button>
+        <button onclick="openPage('employment.html')">Employment</button>    
+    </div>
+
+    <div id="details" class="tabcontent">
+        <iframe src="personal_details.html"></iframe>
+      </div>
+      
+      <div id="contact" class="tabcontent">
+        <iframe src="contact.html"></iframe>
+      </div>
+      
+      <div id="education" class="tabcontent">
+        <iframe src="education.html"></iframe>
+      </div>
+      
+      <div id="employment" class="tabcontent">
+        <iframe src="employment.html"></iframe>
+      </div>
+
+</body>
+
+</html>

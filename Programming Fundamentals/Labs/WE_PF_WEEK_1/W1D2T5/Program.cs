@@ -24,9 +24,9 @@ namespace W1D2T5
                 else if (arr[i] > 0) positiveCount++;
                 else negativeCount++;
             }
-            Console.WriteLine("\nPositive Ratio: " + string.Format("{0:0.000}", positiveCount / (decimal)n));
-            Console.WriteLine("Negative Ratio: " + string.Format("{0:0.000}", negativeCount / (decimal)n));
-            Console.WriteLine("Zeros Ratio: " + string.Format("{0:0.000}", zeroCount / (decimal)n));
+            Console.WriteLine("\nPositive Ratio: " + string.Format("{0:0.000000}", positiveCount / (decimal)n));
+            Console.WriteLine("Negative Ratio: " + string.Format("{0:0.000000}", negativeCount / (decimal)n));
+            Console.WriteLine("Zeros Ratio: " + string.Format("{0:0.000000}", zeroCount / (decimal)n));
         }
         static void Main()
         {

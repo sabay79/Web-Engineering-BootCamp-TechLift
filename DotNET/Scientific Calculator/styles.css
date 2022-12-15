@@ -1,0 +1,53 @@
+.calculator {
+    width: fit-content;
+    padding: 25px;
+    border: 1px solid;
+    }
+    input{
+        width: 98%;
+        height: 50px;
+        border: 1px solid #888888;
+        margin: 3px;
+    }
+    .cal-buttons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .button{
+        margin: 3px;
+        width: 60px;
+        border: none;
+        height: 35px;
+        border-radius: 4px;
+        color: #000000;
+        cursor: pointer;
+    }
+    #log{
+        width: 130px;
+    }
+
+    button:hover{
+        border: 1px solid #888888;
+        background-color: whitesmoke;
+        color: #000000;
+        font-weight: bold;
+    }
+
+    .triggers {
+        background-color: red;
+        color: white;
+    }
+    .complex-stuff {
+        background-color: orange;
+        color: white;
+    }
+    .basic-stuff {
+        background-color: darkcyan;
+        color: white;
+
+    }
+    iframe{
+        width: 530px;
+        height: 335px;
+    }
