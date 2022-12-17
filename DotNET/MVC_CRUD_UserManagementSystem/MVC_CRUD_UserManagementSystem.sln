@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_CRUD_UserManagementSystem", "MVC_CRUD_UserManagementSystem.csproj", "{5D2EC832-9D9A-4B54-92EB-D9288FAEC3C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D2EC832-9D9A-4B54-92EB-D9288FAEC3C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D2EC832-9D9A-4B54-92EB-D9288FAEC3C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D2EC832-9D9A-4B54-92EB-D9288FAEC3C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D2EC832-9D9A-4B54-92EB-D9288FAEC3C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E69A542-4A53-486C-8CAD-30029D3B9869}
+	EndGlobalSection
+EndGlobal

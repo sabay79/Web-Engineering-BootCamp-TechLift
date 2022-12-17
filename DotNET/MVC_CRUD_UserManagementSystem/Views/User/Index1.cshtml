@@ -1,0 +1,20 @@
+﻿@model List<UserModel>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@Html.ActionLink("Add User", "Add")
+@Html.ActionLink("Update User", "Edit")
+@Html.ActionLink("Delete User", "Delete")
+
+<br><br>
+<div>User List</div>
+<ul>
+    @foreach(UserModel item in Model)
+    {
+        <li>@item.Name</li>
+    }
+</ul>
