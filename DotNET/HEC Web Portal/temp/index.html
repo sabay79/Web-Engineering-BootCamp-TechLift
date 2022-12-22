@@ -3,7 +3,6 @@
 
 <head>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="script.js"></script>
 
     <link rel = "icon" href="/media/hec_logo.png" type = "image/x-icon">
     <title>HEC Online Portal</title>
@@ -32,8 +31,8 @@
         <button onclick="openPage('education.html')">Education</button>
         <button onclick="openPage('employment.html')">Employment</button>    
     </div>
-
-    <div id="details" class="tabcontent">
+    <div>
+      <div id="details" class="tabcontent">
         <iframe src="personal_details.html"></iframe>
       </div>
       
@@ -48,7 +47,16 @@
       <div id="employment" class="tabcontent">
         <iframe src="employment.html"></iframe>
       </div>
+    </div>
+    <br>
+    <div style="margin: 15px;">
+      <button>PREVIOUS</button>
+      <button type="submit">SAVE & CLOSE</button>
+      <button>NEXT</button>        
+    </div>
 
+
+      
 </body>
 
 </html>

@@ -1,0 +1,16 @@
+nav{
+  font-size: 13px;
+  font-weight: 600;
+  color: black;
+  margin: 15px 15px 0px 15px;
+}
+#nav-tabContent{
+  margin: 0px 15px 25px 15px;
+  border-left: 1px solid #DEE2E6;
+  border-right: 1px solid #DEE2E6;
+  border-bottom: 1px solid #DEE2E6;
+}
+.nav-tabs button:hover:not(.active){
+  border-top: 2px solid #27AE60;
+  color: #27AE60;
+}
