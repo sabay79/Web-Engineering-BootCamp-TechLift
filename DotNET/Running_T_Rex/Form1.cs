@@ -113,6 +113,11 @@ namespace Running_T_Rex
             if (e.KeyCode == Keys.T && isgameover == true)
             { ResetGame(); }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
