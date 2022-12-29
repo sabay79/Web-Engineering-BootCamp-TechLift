@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 
 
 namespace Running_T_Rex
@@ -17,22 +9,22 @@ namespace Running_T_Rex
         public Splash()
         {
             InitializeComponent();
-            progressBar.Value= 0;
+            progressBar.Value = 0;
         }
 
-        private void Splash_Load(object sender, EventArgs e) {}
+        private void Splash_Load(object sender, EventArgs e) { }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e) 
         {
             progressBar.Value += 1;
             progressLabel.Text = progressBar.Value.ToString() + "%";
-            if(progressBar.Value == 100) 
+            if (progressBar.Value == 100)
             {
                 timer1.Enabled = false;
                 Form1 main = new Form1();
                 this.Hide();
-                this.Close();
-                main.ShowDialog();
+                //this.Close();
+                main.Show();
             }
         }
     }

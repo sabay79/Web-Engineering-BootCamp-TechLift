@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Running_T_Rex
@@ -64,7 +57,8 @@ namespace Running_T_Rex
             {
                 jumpingSpeed = -12;
                 frc -= 1;
-            }else
+            }
+            else
             { jumpingSpeed = 12; }
 
             if (character.Top > 315 && jump == false)
