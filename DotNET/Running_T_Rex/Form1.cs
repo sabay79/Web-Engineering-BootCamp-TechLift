@@ -90,7 +90,7 @@ namespace Running_T_Rex
                         character.Height = 70;
                         character.Width = 100;
 
-                        score.Text += "   Press T to Restart";
+                        score.Text += " R -> Restart  E -> Exit";
                         isgameover = true;
                     }
                 }
@@ -110,14 +110,14 @@ namespace Running_T_Rex
             if (jump == true)
             { jump = false; }
 
-            if (e.KeyCode == Keys.T && isgameover == true)
+            if (e.KeyCode == Keys.R && isgameover == true)
             { ResetGame(); }
+
+            if (e.KeyCode == Keys.E && isgameover == true)
+            { System.Windows.Forms.Application.Exit(); }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void Form1_Load(object sender, EventArgs e) { }
     }
 }
 

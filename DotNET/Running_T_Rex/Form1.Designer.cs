@@ -54,10 +54,10 @@
             // 
             this.score.AutoSize = true;
             this.score.BackColor = System.Drawing.Color.Transparent;
-            this.score.Font = new System.Drawing.Font("Merriweather", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.score.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.score.Location = new System.Drawing.Point(15, 9);
             this.score.Name = "score";
-            this.score.Size = new System.Drawing.Size(75, 21);
+            this.score.Size = new System.Drawing.Size(76, 20);
             this.score.TabIndex = 7;
             this.score.Text = "Score: 0";
             // 
@@ -70,7 +70,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(262, 87);
+            this.pictureBox5.Location = new System.Drawing.Point(83, 87);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(70, 40);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -81,7 +81,7 @@
             // 
             this.flyingFlamingo.BackColor = System.Drawing.Color.Transparent;
             this.flyingFlamingo.Image = ((System.Drawing.Image)(resources.GetObject("flyingFlamingo.Image")));
-            this.flyingFlamingo.Location = new System.Drawing.Point(888, 165);
+            this.flyingFlamingo.Location = new System.Drawing.Point(574, 165);
             this.flyingFlamingo.Name = "flyingFlamingo";
             this.flyingFlamingo.Size = new System.Drawing.Size(100, 80);
             this.flyingFlamingo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -93,7 +93,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(803, 26);
+            this.pictureBox2.Location = new System.Drawing.Point(489, 35);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(70, 40);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -105,7 +105,7 @@
             this.runningTrack.BackColor = System.Drawing.Color.SandyBrown;
             this.runningTrack.Location = new System.Drawing.Point(-10, 404);
             this.runningTrack.Name = "runningTrack";
-            this.runningTrack.Size = new System.Drawing.Size(1111, 97);
+            this.runningTrack.Size = new System.Drawing.Size(714, 56);
             this.runningTrack.TabIndex = 0;
             this.runningTrack.TabStop = false;
             // 
@@ -124,7 +124,7 @@
             // 
             this.bushes.BackColor = System.Drawing.Color.Transparent;
             this.bushes.Image = ((System.Drawing.Image)(resources.GetObject("bushes.Image")));
-            this.bushes.Location = new System.Drawing.Point(715, 379);
+            this.bushes.Location = new System.Drawing.Point(401, 379);
             this.bushes.Name = "bushes";
             this.bushes.Size = new System.Drawing.Size(60, 25);
             this.bushes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -136,7 +136,7 @@
             // 
             this.trunk.BackColor = System.Drawing.Color.Transparent;
             this.trunk.Image = ((System.Drawing.Image)(resources.GetObject("trunk.Image")));
-            this.trunk.Location = new System.Drawing.Point(781, 362);
+            this.trunk.Location = new System.Drawing.Point(467, 362);
             this.trunk.Name = "trunk";
             this.trunk.Size = new System.Drawing.Size(50, 50);
             this.trunk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -148,7 +148,7 @@
             // 
             this.cactus.BackColor = System.Drawing.Color.Transparent;
             this.cactus.Image = ((System.Drawing.Image)(resources.GetObject("cactus.Image")));
-            this.cactus.Location = new System.Drawing.Point(837, 350);
+            this.cactus.Location = new System.Drawing.Point(523, 350);
             this.cactus.Name = "cactus";
             this.cactus.Size = new System.Drawing.Size(45, 55);
             this.cactus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -161,7 +161,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(1085, 499);
+            this.ClientSize = new System.Drawing.Size(690, 447);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.flyingFlamingo);
             this.Controls.Add(this.score);

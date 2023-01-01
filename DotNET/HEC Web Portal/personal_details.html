@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="main_body_styles.css">
+    <link rel="stylesheet" href="pageBody_styles.css">
+    <link rel="stylesheet" href="personal_details_styles.css">
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+
+    <link rel = "icon" href="/media/hec_logo.png" type = "image/x-icon">
+    <title>HEC Online Portal</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <form>
+            <tr style="margin-top: 15px;">
+                <h6>Tell us about Yourself!</h6>
+            </tr>
+            <div class="row">
+                <div class="col-xxl-6">
+                    <tr>
+                        <div class="dropdown">
+                            <td><label for="title">Title</label></td>
+                            <td>
+                                <select id="title" name="title" required>
+                                    <option value="Dr.">Dr.</option>
+                                    <option value="Engr.">Engr.</option>
+                                    <option value="Mr.">Mr.</option>
+                                    <option value="Ms.">Ms.</option>
+                                    </select>     
+                            </td>             
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="textbox_container">
+                            <td><label for="fname">First Name</label></td>
+                            <td><input class="textbox" type="text" id="fname" name="firstname" placeholder="First name.." required></td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="textbox_container">
+                            <td><label for="mname">Middle Name</label></td>
+                            <td><input class="textbox" type="text" id="mname" name="middlename" placeholder="Middle name.."></td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="textbox_container">
+                            <td><label for="lname">Last Name</label></td>
+                            <td><input class="textbox" type="text" id="lname" name="lastname" placeholder="Last name.." required></td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="textbox_container">
+                            <td><label for="fullname">Full Name</label></td>
+                            <td><input class="textbox" type="text" id="fullname" name="fullname" readonly></td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="radiobtn">
+                            <table id="maritial_status_table">
+                                <td><label for="maritalstatus">Marital Status</label></td>
+                                <td>
+                                    <input type="radio" id="single" name="maritialstatus" value="Single">Single<br>
+                                    <input type="radio" id="married" name="maritialstatus" value="Married">Married<br>
+                                    <input type="radio" id="widowed" name="maritialstatus" value="Widowed">Widowed<br>
+                                    <input type="radio" id="divorced" name="maritialstatus" value="Separated/Divorced">Separated/Divorced<br>
+                                </td>       
+                            </table>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="radiobtn">
+                            <td><label for="gender">Gender</label></td>
+                            <td>
+                                <input type="radio" id="female" name="gender" value="Female">Female   
+                                <input type="radio" id="male" name="gender" value="Male">Male 
+                                <input type="radio" id="other" name="gender" value="Other">Other
+                            </td>   
+                        </div>
+                    </tr>
+                </div>
+
+                <div class="col-xxl-6">
+                    <tr>
+                        <div id="display_image">
+                            <img id="profile_pic" src="/media/default-profile-pic.png">
+                        </div>
+                        <input type="file" id="image_input" name="img" accept="image/png, image/jpg">
+                        <br><br>
+                        <button id="upload_but">UPLOAD</button>
+                        <button id="delete_but">DELETE</button>
+                    </tr>
+                </div>
+            </div>
+
+            <tr>
+                <h6>Biographical Information</h6>
+            </tr>
+            <div class="row">
+                <div class="col-xxl-6">
+                    <tr>
+                        <div class="dateinput">
+                            <td><label for="birthday">Date of Birth</label></td>
+                            <input type="date" id="birthday" name="birthday" required>
+                        </div>                    
+                    </tr>
+                    <tr>
+                        <div class="dropdown">
+                            <td><label for="country">Country of Birth</label></td>
+                            <td>
+                                <select id="country" name="country" required>
+                                    <option value="Pakistan">Pakistan</option>
+                                </select>     
+                            </td>             
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="dropdown">
+                            <td><label for="religion">Religion</label></td>
+                            <td>
+                                <select id="religion" name="religion" required>
+                                    <option value="Islam">Islam</option>
+                                    <option value="Other">Other</option>
+                                </select>     
+                            </td>             
+                        </div>
+                    </tr>
+                </div>
+                <div class="col-xxl-6">
+                    <tr>
+                        <div class="dropdown">
+                            <td><label for="province">Domicile Province</label></td>
+                            <td>
+                                <select id="province" name="province" required>
+                                    <option value="Azad Jammu & Kashmir">Azad Jammu & Kashmir</option>
+                                    <option value="Balochistan">Balochistan</option>
+                                    <option value="Gilgit-Balitistan">Gilgit-Balitistan</option>
+                                    <option value="Islamabad">Islamabad</option>
+                                    <option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Sindh">Sindh</option>
+                                </select>     
+                            </td>             
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="dropdown">
+                            <td><label for="city">Domicile City</label></td>
+                            <td>
+                                <select id="city" name="city" required>
+                                    <option value="Islamabad">Islamabad</option>
+                                    <option value="Rawalpindi">Rawalpindi</option>
+                                    <option value="Lahore">Lahore</option>
+                                    <option value="Karachi">Karachi</option>
+                                </select>     
+                            </td>             
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="dropdown">
+                            <td><label for="district">Domicile District</label></td>
+                            <td>
+                                <select id="district" name="district" required>
+                                    <option value="Islamabad">Islamabad</option>
+                                    <option value="Rawalpindi">Rawalpindi</option>
+                                    <option value="Lahore">Lahore</option>
+                                    <option value="Karachi">Karachi</option>
+                                </select>     
+                            </td>             
+                        </div>
+                    </tr>
+                </div>
+            </div>
+
+            <tr>
+                <h6>National ID</h6>
+            </tr>
+            <div class="alert alert-info">Please enter your identity information.</div>
+
+            <div class="row">
+                <div class="col-xxl-12">
+                    <table style="border: 1px solid #ccc;">
+                        <tr class="head_row" style="padding-top: 10px; padding-bottom: 10px;">
+                            <th>Country</th>
+                            <th>Type</th>
+                            <th>Identification Number</th>    
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="dropdown">
+                                        <select id="country" name="country">
+                                            <option value="Pakistan">Pakistan</option>
+                                        </select>     
+                                </div>    
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <select id="idtype" name="idtype">
+                                        <option value="B-Form">B-Form</option>
+                                        <option value="CNIC">CNIC</option>
+                                        <option value="NTN">NTN</option>
+                                        <option value="Passport">Passport</option>
+                                    </select>     
+                            </div>    
+                            </td>
+                            <td>
+                                <input class="textbox" type="text" id="id" name="idnumber">
+                            </td>
+                        </tr>
+                    </table>   
+                    <br>
+                    <button class="plus_btn"><i class="fa fa-plus"></i></button>                      
+                    <button class="add_btn">Click to Add</button>    
+              </div>
+            </div>
+
+            <tr>
+                <h6>Father's Information</h6>
+            </tr>
+            <div class="row">
+                <div class="col-xxl-6">
+                    <tr>
+                        <div class="textbox_container">
+                            <td><label for="fathername">Father's Name</label></td>
+                            <td><input class="textbox" type="text" id="fathername" name="fathername" placeholder="Father Name.." required></td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="textbox_container">
+                            <td><label for="CNIC">CNIC</label></td>
+                            <td><input class="textbox" type="text" id="CNIC" name="CNIC" placeholder="XXXXX-XXXXXXX-X" required></td>
+                            <td><label></label></td>
+                            <td><label style="font-size: 10px; color: gray; font-weight: normal;">e.g. 1234512345670</label></td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="radiobtn">
+                            <td><label for="fatherstatus">Status</label></td>
+                            <td>
+                                <input type="radio" id="alive" name="fatherstatus" value="Alive">Alive
+                                <input type="radio" id="decreased" name="fatherstatus" value="Decreased">Decreased
+                            </td>   
+                        </div>
+                    </tr>
+                </div>
+                <div class="col-xxl-6">
+                    <tr>
+                        <div class="dropdown">
+                            <td><label for="fatheroccupation">Occupation</label></td>
+                            <td>
+                                <select id="fatheroccupation" name="fatheroccupation" required>
+                                    <option value="Data Analyst">Data Analyst</option>
+                                    <option value="Web Developer">Web Developer</option>
+                                    <option value="Web Engineer">Web Engineer</option>
+                                    </select>     
+                            </td>             
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="checkbox">
+                            <label></label>
+                            <input type="checkbox" id="employed" name="employed">
+                            <label for="employed">Currently Employed</label><br>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </form>
+        <br>
+    </div>         
+</body>
+</html>

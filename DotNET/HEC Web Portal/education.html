@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="main_body_styles.css">
+    <link rel="stylesheet" href="pageBody_styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+
+    <link rel = "icon" href="/media/hec_logo.png" type = "image/x-icon">
+    <title>HEC Online Portal</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <form>
+            <div class="row">
+                <div class="col-xxl-12">
+                    <div class="alert alert-info" style="margin-top: 15px;">
+                        To apply for Aghaz e Haqooq e Balochistan, no need to fill education details, just click here.                    </div>
+                    <div style="margin: 25px 0px 25px 0px; text-align: right;">
+                        <button class="action_btn">APPLY FOR AGHAZ E HAQOOQ E BALOCHISTAN PROJECT</button>
+                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                          <tr class="head_row">
+                            <th></th>
+                            <th>Year of Passing</th>
+                            <th>Qualification Level</th>
+                            <th>Program Title</th>
+                            <th>Discipline</th>
+                            <th>University</th>
+                            <th>Obt. Marks/CGPA</th>
+                            <th>Locked</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                                <input class="form-check-input" type="radio" name="edu_radio" id="edu_radio">
+                            </td>
+                            <td>2021</td>
+                            <td>Bachelor (16 Years) Degree</td>
+                            <td>Bachelors</td>
+                            <td>Software Engineering</td>
+                            <td>FJWU</td>
+                            <td>3.0</td>
+                            <td>
+                                <input class="form-check-input" type="checkbox" value="" id="edu_check">
+                            </td>
+                          </tr>
+                        </tbody>
+                    </table>
+                    <button class="plus_btn"><i class="fa fa-plus"></i></button>                      
+                    <button class="add_btn">Click to Add</button>  
+                    <div style="margin-top: 25px; text-align: right;">
+                        <button class="action_btn">APPLY FOR DEGREE ATTESTATION</button>
+                        <button class="action_btn">SEARCH MISSING DEGREE PROGRAM</button>
+                    </div>
+              </div>
+              <div style="margin-top: 10px;"></div>
+                <div>
+                    <form>
+                        <h6>Tell Us About Your Education!</h6>
+                        <div class="alert alert-info">
+                            Please enter your qualifications in lowest to highest (Chronological) order.<br>
+                            Please select "Add/Update to List" button after adding information to save the record.      
+                        </div>
+                        <div class="alert alert-info">
+                            If you can’t find your University, Campus, Department or Degree Program, please contact your University focal Person to get it entered.
+                        </div>
+    
+                        <div class="row">
+                            <div class="col-xxl-6">
+                                <h6>Qualification Details</h6>
+                                <div class="dropdown">
+                                    <label for="qualification_level">Qualification Level</label>
+                                    <select id="qualification_level" name="qualification_level" required>
+                                        <option value="Secondary School Certificate">Secondary School Certificate</option>
+                                        <option value="Higher Secondary School Certificate">Highter Secondary School Certificate</option>
+                                        <option value="Bachelors (14 years) Degree">Bachelors (14 years) Degree</option>
+                                        <option value="Bachelors (16 years) Degree">Bachelors (16 years) Degree</option>
+                                        <option value="Masters (18 years) Degree">Masters (18 years) Degree</option>
+                                        <option value="PhD">PhD</option>
+                                    </select>           
+                                </div>
+                                <div class="checkbox">
+                                    <label></label>
+                                    <input type="checkbox" id="incomplete_edu" name="incomplete_edu">
+                                    <label for="incomplete_edu">Incomplete Education</label><br>
+                                </div>    
+                                <div class="dateinput">
+                                    <label for="start_date">Start Date</label>
+                                    <input type="date" id="start_date" name="start_date" required>
+                                </div>       
+                                <div class="checkbox">
+                                    <label></label>
+                                    <input type="checkbox" id="currently_enrrolled" name="currently_enrrolled">
+                                    <label for="currently_enrrolled">Currently Enrolled</label><br>
+                                </div>                 
+                                <div class="dateinput">
+                                    <label for="end_date">End Date</label>
+                                    <input type="date" id="end_date" name="end_date" required>
+                                </div>                    
+                            </div>
+    
+                            <div class="col-xxl-6">
+                                <h6>Degree/Certificate Details</h6>
+                                <div class="textbox_container">
+                                    <label for="dissertation_title">Title of Dissertation</label>
+                                    <input class="textbox" type="text" id="dissertation_title" name="dissertation_title">
+                                </div>
+                                <div class="textbox_container">
+                                    <label for="re_no">Registration/Roll Number</label>
+                                    <input class="textbox" type="text" id="re_no" name="re_no" required>
+                                </div>                
+                                <div class="dropdown">
+                                    <label for="edu_system">Education System</label>
+                                    <select id="edu_system" name="edu_system" required>
+                                        <option value="Annual">Annual</option>
+                                        <option value="Semester">Semester</option>
+                                        <option value="Term">Term</option>
+                                    </select>       
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="col-xxl-6">
+                                <h6>Degree / Certificate Awarding Institute Details</h6>
+                                <div class="dropdown">
+                                    <label for="country">Country</label>
+                                    <select id="country" name="country" required>
+                                        <option value="Pakistan">Pakistan</option>
+                                    </select>       
+                                </div>
+                                <div class="dropdown">
+                                    <label for="city">City</label>
+                                    <select id="city" name="city" >
+                                        <option value="Islamabad">Islamabad</option>
+                                        <option value="Rawalpindi">Rawalpindi</option>
+                                        <option value="Lahore">Lahore</option>
+                                        <option value="Karachi">Karachi</option>
+                                    </select>              
+                                </div>
+                                <div class="dropdown">
+                                    <label for="institute">Degree Awarding Institute</label>
+                                    <select id="institute" name="institute">
+                                        <option value="FBISE">FBISE</option>
+                                        <option value="FJWU">FJWU</option>
+                                        <option value="Other">Other</option>
+                                    </select>       
+                                </div>
+                                <div class="textbox_container">
+                                    <label for="institute_name">School / College / Uni.</label>
+                                    <input class="textbox" type="text" id="institute_name" name="institute_name" required>
+                                </div>
+                                <div class="radiobtn">
+                                    <label for="institute_sector">Institute Sector</label>
+                                        <input type="radio" id="institute_sector" name="institute_sector" value="Private Sector">Private Sector        
+                                        <input type="radio" id="institute_sector" name="institute_sector" value="Public Sector">Public Sector
+                                </div>
+                                <div class="textbox_container">
+                                    <label for="program">Program</label>
+                                    <input class="textbox" type="text" id="program" name="program">
+                                </div>
+                                <div class="textbox_container">
+                                    <label for="campus">Campus</label>
+                                    <input class="textbox" type="text" id="campus" name="campus">
+                                </div>
+                                <div class="textbox_container">
+                                    <label for="department">Department</label>
+                                    <input class="textbox" type="text" id="department" name="department">
+                                </div>
+                                <div class="dropdown">
+                                    <label for="degree_type">Degree Type</label>
+                                    <select id="degree_type" name="degree_type">
+                                        <option value="Regular">Regular</option>
+                                        <option value="Private">Private</option>
+                                        <option value="Virtual">Virtual</option>
+                                    </select>       
+                                </div>
+                                <div class="dropdown">
+                                    <label for="discipline">Discipline</label>
+                                    <select id="discipline" name="discipline">
+                                        <option value="Engineering & Technology">Engineering & Technology</option>
+                                    </select>       
+                                </div>
+                                <div class="dropdown">
+                                    <label for="major">Major</label>
+                                    <select id="major" name="major">
+                                        <option value="Software Engineering">Software Engineering</option>
+                                        <option value="Data Science">Data Science</option>
+                                    </select>       
+                                </div>
+                                <div class="textbox_container">
+                                    <label for="research_area">Area of research</label>
+                                    <input class="textbox" type="text" id="research_area" name="research_area">
+                                </div>
+                            </div>
+                            <div class="col-xxl-6">
+                                <h6>Academic Performance Details</h6>
+                                <div class="radiobtn">
+                                    <label for="grading_sys">Grading System</label>
+                                        <input type="radio" id="grading_sys" name="grading_sys" value="CGPA">CGPA        
+                                        <input type="radio" id="grading_sys" name="grading_sys" value="Marks">Marks
+                                        <input type="radio" id="grading_sys" name="grading_sys" value="Percentage">Percentage                                </div>
+                                <div class="textbox_container">
+                                    <label for="total">Total</label>
+                                    <input class="textbox" type="text" id="total" name="total">
+                                </div>
+                                <div class="textbox_container">
+                                    <label for="obtained">Obtained</label>
+                                    <input class="textbox" type="text" id="obtained" name="obtained">
+                                </div>
+                                <br>
+                                <div>
+                                    <button class="action_btn">UPDATE GRADING DETAILS</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="action_btn">ADD/UPDATE TO LIST</button>
+                        <button class="action_btn">CANCEL</button>    
+                    </form>
+                </div>
+                <br><br>
+            </div>
+        </form>    
+        <br>
+    </div>        
+</body>
+</html>

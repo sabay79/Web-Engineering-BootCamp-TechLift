@@ -102,3 +102,10 @@ table th, td{
     font-size: 11px;
     width:auto;
 }
+#nav-personal{
+  height: 100%;
+}
+iframe{
+  width: 100%;
+  overflow:hidden;
+}
