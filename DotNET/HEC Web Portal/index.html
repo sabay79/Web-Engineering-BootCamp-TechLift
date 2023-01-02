@@ -19,6 +19,15 @@
 
     <link rel = "icon" href="/media/hec_logo.png" type = "image/x-icon">
     <title>HEC Online Portal</title>
+
+    <style>
+        iframe{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -55,24 +64,27 @@
 
         <div class="tab-content" id="nav-tabContent">
 
+            <!--onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:200px;width:100%;border:none;overflow:hidden;"-->
+            <!--Add later in tabs-->
+            <!--No more needed-->
             <!--PERSONAL DETAILS-->
             <div class="tab-pane fade show active" id="nav-personal" role="tabpanel" aria-labelledby="nav-personal-tab">
-                <iframe src="personal_details.html" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:200px;width:100%;border:none;overflow:hidden;"></iframe>
+                <iframe src="personal_details.html" onload="resizeIframe()" ></iframe>
             </div>
 
             <!--CONTACT-->
-            <div class="tab-pane fade show active" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                <iframe src="contact.html" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:200px;width:100%;border:none;overflow:hidden;"></iframe>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <iframe src="contact.html"></iframe>
             </div>
 
             <!--EDUCATION-->
-            <div class="tab-pane fade show active" id="nav-edu" role="tabpanel" aria-labelledby="nav-edu-tab">
-                <iframe src="education.html" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:200px;width:100%;border:none;overflow:hidden;"></iframe>
+            <div class="tab-pane fade" id="nav-edu" role="tabpanel" aria-labelledby="nav-edu-tab">
+                <iframe src="education.html"></iframe>
             </div>
 
             <!--EMPLOYMENT-->
-            <div class="tab-pane fade show active" id="nav-emp" role="tabpanel" aria-labelledby="nav-emp-tab">
-                <iframe src="employment.html" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:200px;width:100%;border:none;overflow:hidden;"></iframe>
+            <div class="tab-pane fade" id="nav-emp" role="tabpanel" aria-labelledby="nav-emp-tab">
+                <iframe src="employment.html"></iframe>
             </div>
         </div>
 
