@@ -1,5 +1,99 @@
+//Set iFrame Height //
+function resizeIframe() {
+
+   //obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+   $('iframe').height($('iframe').contents().height());
+
+ }
+ //Input Masking
+ $(':input').inputmask();
+
+
 // $(document).ready(function(){
+//   document.getElementById('contact_details').style.display = "none";
 // });
+
+// //Show/Toggle section on button click //
+// function openContactDetails()
+// {
+//   var x = document.getElementById("contact_details");
+//   if (x.style.display === "none") {
+//     x.style.display = "block";
+//   } else {
+//     x.style.display = "none";
+//   }
+// }
+
+//Print value on Input Field //
+
+let fullname = document.getElementById("fullname");
+let firstName = document.getElementById('fname').value;
+let middleName = document.getElementById('mname').value;
+let lastName = document.getElementById('lname').value;
+fullname.value = firstName + ' ' + middleName + ' ' + lastName;
+
+function generateFullName(){
+  document.getElementById("fullname").value = 
+  document.getElementById("fname").value + " " +
+  document.getElementById("mname").value + " " +
+  document.getElementById("lname").value;
+}
+
+//Check condition//
+function updateGradingSystem()
+{
+  let totalGrade = document.getElementById("totalGradeLabel");
+  let obtainedGrade = document.getElementById("obtainedGradeLabel");
+
+  if (document.getElementById('cgpaGrading').checked == true) 
+  {
+    totalGrade.innerText = "Total CGPA";
+    obtainedGrade.innerHTML = "Obtained CGPA";
+  }
+  if (document.getElementById('marksGrading').checked == true) 
+  {
+    totalGrade.innerText = "Total Marks";
+    obtainedGrade.innerHTML = "Obtained Marks";
+  }
+  if (document.getElementById('percentageGrading').checked == true) 
+  {
+    totalGrade.innerText = "Total Percentage";
+    obtainedGrade.innerHTML = "Obtained Percentage";
+  }
+}
+
+//Validation on button click //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ //$("#CNIC").inputmask("99999-9999999-9");
+
+ //$("#phone").inputmask({"mask": "(999) 999-9999"});
+
+
 
 // $('#nav-personal-tab').on('click', function(event) {        
 //    document.getElementById("nav-personal").setAttribute('hidden', false)
@@ -24,10 +118,3 @@
 // });
 
 // $('#about').setAttribute('hidden', true)
-//Set iFrame Height
-function resizeIframe() {
-
-   //obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-   $('iframe').height($('iframe').contents().height());
-
- }

@@ -3,13 +3,21 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--JQuery Input Masks Library-->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+    
+    <!--W3 CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    
     <link rel="stylesheet" href="main_body_styles.css">
     <link rel="stylesheet" href="pageBody_styles.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
 
     <link rel = "icon" href="/media/hec_logo.png" type = "image/x-icon">
     <title>HEC Online Portal</title>
@@ -21,7 +29,8 @@
             <div class="row">
                 <div class="col-xxl-12">
                     <div class="alert alert-info" style="margin-top: 15px;">
-                        To apply for Aghaz e Haqooq e Balochistan, no need to fill education details, just click here.                    </div>
+                        To apply for Aghaz e Haqooq e Balochistan, no need to fill education details, just click here.                    
+                    </div>
                     <div style="margin: 25px 0px 25px 0px; text-align: right;">
                         <button class="action_btn">APPLY FOR AGHAZ E HAQOOQ E BALOCHISTAN PROJECT</button>
                     </div>
@@ -73,12 +82,14 @@
                         <div class="alert alert-info">
                             If you can’t find your University, Campus, Department or Degree Program, please contact your University focal Person to get it entered.
                         </div>
-    
+                         
                         <div class="row">
+                            
+                            <!--Qualification Details-->
                             <div class="col-xxl-6">
                                 <h6>Qualification Details</h6>
                                 <div class="dropdown">
-                                    <label for="qualification_level">Qualification Level</label>
+                                    <label class="required" for="qualification_level">Qualification Level</label>
                                     <select id="qualification_level" name="qualification_level" required>
                                         <option value="Secondary School Certificate">Secondary School Certificate</option>
                                         <option value="Higher Secondary School Certificate">Highter Secondary School Certificate</option>
@@ -94,7 +105,7 @@
                                     <label for="incomplete_edu">Incomplete Education</label><br>
                                 </div>    
                                 <div class="dateinput">
-                                    <label for="start_date">Start Date</label>
+                                    <label class="required" for="start_date">Start Date</label>
                                     <input type="date" id="start_date" name="start_date" required>
                                 </div>       
                                 <div class="checkbox">
@@ -103,11 +114,12 @@
                                     <label for="currently_enrrolled">Currently Enrolled</label><br>
                                 </div>                 
                                 <div class="dateinput">
-                                    <label for="end_date">End Date</label>
+                                    <label class="required" for="end_date">End Date</label>
                                     <input type="date" id="end_date" name="end_date" required>
                                 </div>                    
                             </div>
-    
+
+                            <!--Degree/Certificate Details-->    
                             <div class="col-xxl-6">
                                 <h6>Degree/Certificate Details</h6>
                                 <div class="textbox_container">
@@ -115,7 +127,7 @@
                                     <input class="textbox" type="text" id="dissertation_title" name="dissertation_title">
                                 </div>
                                 <div class="textbox_container">
-                                    <label for="re_no">Registration/Roll Number</label>
+                                    <label class="required" for="re_no">Registration/Roll Number</label>
                                     <input class="textbox" type="text" id="re_no" name="re_no" required>
                                 </div>                
                                 <div class="dropdown">
@@ -127,13 +139,16 @@
                                     </select>       
                                 </div>
                             </div>
+
                         </div>
     
                         <div class="row">
+
+                            <!--Degree Awarding Institute Details--> 
                             <div class="col-xxl-6">
                                 <h6>Degree / Certificate Awarding Institute Details</h6>
                                 <div class="dropdown">
-                                    <label for="country">Country</label>
+                                    <label class="required" for="country">Country</label>
                                     <select id="country" name="country" required>
                                         <option value="Pakistan">Pakistan</option>
                                     </select>       
@@ -156,7 +171,7 @@
                                     </select>       
                                 </div>
                                 <div class="textbox_container">
-                                    <label for="institute_name">School / College / Uni.</label>
+                                    <label class="required" for="institute_name">School / College / Uni.</label>
                                     <input class="textbox" type="text" id="institute_name" name="institute_name" required>
                                 </div>
                                 <div class="radiobtn">
@@ -202,35 +217,41 @@
                                     <input class="textbox" type="text" id="research_area" name="research_area">
                                 </div>
                             </div>
+
+                            <!--Academic Performance Details-->                             
                             <div class="col-xxl-6">
                                 <h6>Academic Performance Details</h6>
                                 <div class="radiobtn">
-                                    <label for="grading_sys">Grading System</label>
-                                        <input type="radio" id="grading_sys" name="grading_sys" value="CGPA">CGPA        
-                                        <input type="radio" id="grading_sys" name="grading_sys" value="Marks">Marks
-                                        <input type="radio" id="grading_sys" name="grading_sys" value="Percentage">Percentage                                </div>
+                                    <label class="required" for="grading_sys">Grading System</label>
+                                        <input type="radio" id="cgpaGrading" name="grading_sys" value="CGPA" onchange="updateGradingSystem()">CGPA        
+                                        <input type="radio" id="marksGrading" name="grading_sys" value="Marks" onchange="updateGradingSystem()" checked>Marks
+                                        <input type="radio" id="percentageGrading" name="grading_sys" value="Percentage" onchange="updateGradingSystem()">Percentage                                </div>
                                 <div class="textbox_container">
-                                    <label for="total">Total</label>
-                                    <input class="textbox" type="text" id="total" name="total">
+                                    <label class="required" for="total" id="totalGradeLabel">Total Marks</label>
+                                    <input class="textbox" type="text" id="total" name="total" required>
                                 </div>
                                 <div class="textbox_container">
-                                    <label for="obtained">Obtained</label>
-                                    <input class="textbox" type="text" id="obtained" name="obtained">
+                                    <label class="required" for="obtained" id="obtainedGradeLabel">Obtained Marks</label>
+                                    <input class="textbox" type="text" id="obtained" name="obtained" required>
                                 </div>
                                 <br>
                                 <div>
                                     <button class="action_btn">UPDATE GRADING DETAILS</button>
                                 </div>
                             </div>
+
                         </div>
+
                         <button class="action_btn">ADD/UPDATE TO LIST</button>
                         <button class="action_btn">CANCEL</button>    
+                        
                     </form>
                 </div>
                 <br><br>
             </div>
         </form>    
         <br>
-    </div>        
+    </div>  
+    <script src="script.js"></script>      
 </body>
 </html>

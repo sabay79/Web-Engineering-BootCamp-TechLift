@@ -76,6 +76,23 @@ table th, td{
   
   font-size: 12px;
 }
+
+.required::after{
+  content: ' *';
+  color: #e32;
+  display:inline;
+}
+
+iframe{
+  width: 100%;
+  /*
+  height: fit-content;
+  overflow: hidden;
+  border: none;
+  */
+}
+
+
 .plus_btn{
 
   background-color:  #324575;
