@@ -3,4 +3,4 @@ Create HEC Profile Forms (Personal Details, Contact, Education, Employment) With
 - Add Complete validation on all fields. (Done)
 - Apply Input Masking e.g. CNIC, Mobile, Email (Done)
 - Add grid to display information
-- while user enter Date of Birth, Age Should be calculated atomically
+- while user enter Date of Birth, Age Should be calculated automatically...

@@ -1,29 +1,48 @@
 //Set iFrame Height //
 function resizeIframe() {
+  //obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  $('iframe').height($('iframe').contents().height());
+}
 
-   //obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-   $('iframe').height($('iframe').contents().height());
-
- }
- //Input Masking
+ //Input Masking //
  $(':input').inputmask();
 
+ //Upload image in box/div //
+ $("input[name=img]").change(function () {
+  if (this.files && this.files[0]) {
+      var reader = new FileReader();
 
+      reader.onload = function (e) {
+          var img = $('<img>').attr('src', e.target.result);
+          $('#display_image').html(img);
+      };
+      reader.readAsDataURL(this.files[0]);
+  }
+});
+// Remove Image on button click
+document.getElementById("delete_but").onclick = function(){
+  var defaultImage = document.getElementById('profile_pic');
+  $('#display_image').html(defaultImage);
+
+}
+
+//Hide elements at DOM loading //
 $(document).ready(function(){
   document.getElementById('contactDetails').style.display = "none";
 });
 $(document).ready(function(){
   document.getElementById('educationDetails').style.display = "none";
 });
-//Show-Toggle section on button click - Plus   Button //
 
-//Show Education Details div on click
+//Show section on button click //
+
+///Show section on Button Click - Plus Button
 function showSection(sectionID)
 {
   document.getElementById(sectionID).style.display = "block";
 }
 
-//Hide section on Button Click - Cancel Button //
+///Hide section on Button Click - Cancel Button
 function hideSection(sectionID){
   let sectionToHide = document.getElementById(sectionID);
   sectionToHide.style.display = "none";
