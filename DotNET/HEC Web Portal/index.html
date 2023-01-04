@@ -53,37 +53,33 @@
         <!--NAVIGATION BAR-->
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <button class="nav-link active" id="nav-personal-tab" data-bs-toggle="tab" data-bs-target="#nav-personal" type="button" role="tab" aria-controls="nav-personal" aria-selected="true" onclick="hidePrevButton()">Personal Details</button>
-              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false" onclick="showPrevButton()">Contact</button>
-              <button class="nav-link" id="nav-edu-tab" data-bs-toggle="tab" data-bs-target="#nav-edu" type="button" role="tab" aria-controls="nav-edu" aria-selected="false" onclick="showPrevButton()">Education</button>
-              <button class="nav-link" id="nav-emp-tab" data-bs-toggle="tab" data-bs-target="#nav-emp" type="button" role="tab" aria-controls="nav-emp" aria-selected="false" onclick="showPrevButton()">Employment</button>
+              <button class="nav-link active" id="nav-personal-tab" data-bs-toggle="tab" data-bs-target="#nav-personal" type="button" role="tab" aria-controls="nav-personal" aria-selected="true" onclick="hidePrevButton(); resizeIframe('#iFramePersonal')">Personal Details</button>
+              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false" onclick="showPrevButton(); resizeIframe('#iFrameContact')"">Contact</button>
+              <button class="nav-link" id="nav-edu-tab" data-bs-toggle="tab" data-bs-target="#nav-edu" type="button" role="tab" aria-controls="nav-edu" aria-selected="false" onclick="showPrevButton(); resizeIframe('#iFrameEducation')"">Education</button>
+              <button class="nav-link" id="nav-emp-tab" data-bs-toggle="tab" data-bs-target="#nav-emp" type="button" role="tab" aria-controls="nav-emp" aria-selected="false" onclick="showPrevButton(); resizeIframe('#iFrameEmployment')"">Employment</button>
             </div>
         </nav>
 
         <div class="tab-content" id="nav-tabContent">
 
-            <!--onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:200px;width:100%;border:none;overflow:hidden;"-->
-            <!--Add later in tabs-->
-            <!--No more needed-->
-            
             <!--PERSONAL DETAILS-->
             <div class="tab-pane fade show active" id="nav-personal" role="tabpanel" aria-labelledby="nav-personal-tab">
-                <iframe src="personal_details.html" onload="resizeIframe()" ></iframe>
+                <iframe id="iFramePersonal" src="personal_details.html" onload="resizeIframe('#iFramePersonal')"  ></iframe>
             </div>
 
             <!--CONTACT-->
             <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                <iframe src="contact.html"></iframe>
+                <iframe id="iFrameContact" src="contact.html"></iframe>
             </div>
 
             <!--EDUCATION-->
             <div class="tab-pane fade" id="nav-edu" role="tabpanel" aria-labelledby="nav-edu-tab">
-                <iframe src="education.html"></iframe>
+                <iframe id="iFrameEducation" src="education.html"></iframe>
             </div>
 
             <!--EMPLOYMENT-->
             <div class="tab-pane fade" id="nav-emp" role="tabpanel" aria-labelledby="nav-emp-tab">
-                <iframe src="employment.html"></iframe>
+                <iframe id="iFrameEmployment" src="employment.html"></iframe>
             </div>
         </div>
 

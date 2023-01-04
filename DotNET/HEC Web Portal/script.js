@@ -1,7 +1,6 @@
 //Set iFrame Height //
-function resizeIframe() {
-  //obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-  $('iframe').height($('iframe').contents().height());
+function resizeIframe(iFrameID) {
+  $(iFrameID).height($(iFrameID).contents().height());
 }
 //Hide PREVIOUS button when personal details is on display //
 var prevBtn = document.getElementById("prevBtn");
@@ -15,7 +14,7 @@ function showPrevButton(){
   prevBtn.hidden = false;
 }
 
- //Input Masking //
+//Input Masking //
  $(':input').inputmask();
 
  //Upload image in box/div on button click//
@@ -53,6 +52,8 @@ $(document).ready(function(){
 function showSection(sectionID)
 {
   document.getElementById(sectionID).style.display = "block";
+  document.getElementById("iFrameEducation").style.height = '10000px';
+  
 }
 ///Hide section on Button Click - Cancel Button
 function hideSection(sectionID){

@@ -64,8 +64,8 @@
                           </tr>
                         </tbody>
                     </table>
-                    <button class="plus_btn" onclick="showSection('educationDetails')"><i class="fa fa-plus"></i></button>                      
-                    <button class="add_btn">Click to Add</button>  
+                    <button class="plus_btn" onclick="showSection('educationDetails'); resizeIframe('#iFrameEducation'); return false;"><i class="fa fa-plus"></i></button>                      
+                    <button class="add_btn" onclick="showSection('educationDetails'); resizeIframe('#iFrameEducation'); return false;">Click to Add</button>  
                     <div style="margin-top: 25px; text-align: right;">
                         <button class="action_btn">APPLY FOR DEGREE ATTESTATION</button>
                         <button class="action_btn">SEARCH MISSING DEGREE PROGRAM</button>
@@ -74,7 +74,7 @@
                 
                 <div style="margin-top: 10px;"></div>
               
-                <div id="educationDetails">
+                <div id="educationDetails" onshow="resizeIframe('#iFrameEducation')">
                     <form>
                         <h6>Tell Us About Your Education!</h6>
                         <div class="alert alert-info">
@@ -245,7 +245,7 @@
                         </div>
 
                         <button class="action_btn">ADD/UPDATE TO LIST</button>
-                        <button class="action_btn" onclick="hideSection('educationDetails'); return true;">CANCEL</button>    
+                        <button class="action_btn" onclick="hideSection('educationDetails'); resizeIframe('#iFrameEducation'); return false;">CANCEL</button>    
                         
                     </form>
                 </div>
@@ -254,7 +254,8 @@
             </div>
         </form>    
         <br>
-    </div>  
+    </div> 
+     
     <script src="script.js"></script>      
 </body>
 </html>
