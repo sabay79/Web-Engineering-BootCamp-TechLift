@@ -2,8 +2,10 @@ Create HEC Profile Forms (Personal Details, Contact, Education, Employment) With
 - Use JavaScript Also Implement jQuery (Done)
 - Add Complete validation on all fields (Done)
 - Apply Input Masking e.g. CNIC, Mobile, Email (Done)
+
 - Add grid to display information
 - while user enter Date of Birth, Age Should be calculated automatically
+- User API for Country, State, City
 
 - Upload /remove Picture (Done)
 - Show/Hide a section on button click (Done)
