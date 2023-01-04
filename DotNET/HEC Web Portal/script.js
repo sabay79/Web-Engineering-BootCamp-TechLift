@@ -9,11 +9,29 @@ function resizeIframe() {
  $(':input').inputmask();
 
 
-// $(document).ready(function(){
-//   document.getElementById('contact_details').style.display = "none";
-// });
+$(document).ready(function(){
+  document.getElementById('contactDetails').style.display = "none";
+});
+$(document).ready(function(){
+  document.getElementById('educationDetails').style.display = "none";
+});
+//Show-Toggle section on button click - Plus   Button //
 
-// //Show/Toggle section on button click //
+//Show Education Details div on click
+function showSection(sectionID)
+{
+  document.getElementById(sectionID).style.display = "block";
+}
+
+//Hide section on Button Click - Cancel Button //
+function hideSection(sectionID){
+  let sectionToHide = document.getElementById(sectionID);
+  sectionToHide.style.display = "none";
+}
+
+
+
+
 // function openContactDetails()
 // {
 //   var x = document.getElementById("contact_details");

@@ -206,12 +206,12 @@
                     </tbody>
                     </table>
                     
-                    <button class="plus_btn" id="addContact" onclick="openContactDetails()"><i class="fa fa-plus"></i></button>                      
-                    <button class="add_btn">Click to Add</button> 
+                    <button class="plus_btn" id="addContact" onclick="showSection('contactDetails'); return false;"><i class="fa fa-plus"></i></button>                      
+                    <button class="add_btn" onclick="showSection('contactDetails'); return false;">Click to Add</button> 
 
                     <br>
                     <!--Contact Details-->
-                    <div class="row" id="contact_details">
+                    <div class="row" id="contactDetails">
                         <h6 style="margin-top: 15px;">Contact Details</h6>
                         <div class="col-xxl-6">
                             <div class="textbox_container">
@@ -224,18 +224,20 @@
                                 <input class="textbox" type="text" id="email" name="email" data-inputmask="'alias':'email'" placeholder="saba@gmail.com">
                             </div>
                         </div>
+
                         <div class="col-xxl-6">
                             <div class="textbox_container">
                                 <label for="home_phone">Home Phone</label>
                                 <input class="textbox" type="text" id="home_phone" name="home_phone" data-inputmask="'mask':'+99(99) 9999999'" placeholder="+92(51) 7654321">
                             </div>
+
                             <div class="textbox_container">
                                 <label for="fax">Fax</label>
                                 <input class="textbox" type="text" id="fax" name="fax" data-inputmask="'mask':'+99(999) 999-9999'" placeholder="+92(21) 1234-5678">
                             </div>
                         </div>   
-                        <br>
-                        <button class="action_btn" style="margin:15px 15px 0px 15px;">CANCEL</button> 
+
+                        <button class="action_btn" style="margin:15px 15px 0px 15px;" onclick="hideSection('contactDetails'); return false;">CANCEL</button> 
                     </div>
                 </div>
             </div>

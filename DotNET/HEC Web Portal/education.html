@@ -64,15 +64,17 @@
                           </tr>
                         </tbody>
                     </table>
-                    <button class="plus_btn"><i class="fa fa-plus"></i></button>                      
+                    <button class="plus_btn" onclick="showSection('educationDetails')"><i class="fa fa-plus"></i></button>                      
                     <button class="add_btn">Click to Add</button>  
                     <div style="margin-top: 25px; text-align: right;">
                         <button class="action_btn">APPLY FOR DEGREE ATTESTATION</button>
                         <button class="action_btn">SEARCH MISSING DEGREE PROGRAM</button>
                     </div>
-              </div>
-              <div style="margin-top: 10px;"></div>
-                <div>
+                </div>
+                
+                <div style="margin-top: 10px;"></div>
+              
+                <div id="educationDetails">
                     <form>
                         <h6>Tell Us About Your Education!</h6>
                         <div class="alert alert-info">
@@ -82,7 +84,7 @@
                         <div class="alert alert-info">
                             If you can’t find your University, Campus, Department or Degree Program, please contact your University focal Person to get it entered.
                         </div>
-                         
+                            
                         <div class="row">
                             
                             <!--Qualification Details-->
@@ -141,7 +143,7 @@
                             </div>
 
                         </div>
-    
+
                         <div class="row">
 
                             <!--Degree Awarding Institute Details--> 
@@ -243,10 +245,11 @@
                         </div>
 
                         <button class="action_btn">ADD/UPDATE TO LIST</button>
-                        <button class="action_btn">CANCEL</button>    
+                        <button class="action_btn" onclick="hideSection('educationDetails'); return true;">CANCEL</button>    
                         
                     </form>
                 </div>
+                
                 <br><br>
             </div>
         </form>    
