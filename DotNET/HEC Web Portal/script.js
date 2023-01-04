@@ -3,6 +3,17 @@ function resizeIframe() {
   //obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
   $('iframe').height($('iframe').contents().height());
 }
+//Hide PREVIOUS button when personal details is on display //
+var prevBtn = document.getElementById("prevBtn");
+$(document).ready(function(){
+  prevBtn.hidden = true;
+});
+function hidePrevButton(){
+  prevBtn.hidden = true;
+}
+function showPrevButton(){
+  prevBtn.hidden = false;
+}
 
  //Input Masking //
  $(':input').inputmask();

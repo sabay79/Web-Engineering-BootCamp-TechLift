@@ -53,10 +53,10 @@
         <!--NAVIGATION BAR-->
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <button class="nav-link active" id="nav-personal-tab" data-bs-toggle="tab" data-bs-target="#nav-personal" type="button" role="tab" aria-controls="nav-personal" aria-selected="true">Personal Details</button>
-              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
-              <button class="nav-link" id="nav-edu-tab" data-bs-toggle="tab" data-bs-target="#nav-edu" type="button" role="tab" aria-controls="nav-edu" aria-selected="false">Education</button>
-              <button class="nav-link" id="nav-emp-tab" data-bs-toggle="tab" data-bs-target="#nav-emp" type="button" role="tab" aria-controls="nav-emp" aria-selected="false">Employment</button>
+              <button class="nav-link active" id="nav-personal-tab" data-bs-toggle="tab" data-bs-target="#nav-personal" type="button" role="tab" aria-controls="nav-personal" aria-selected="true" onclick="hidePrevButton()">Personal Details</button>
+              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false" onclick="showPrevButton()">Contact</button>
+              <button class="nav-link" id="nav-edu-tab" data-bs-toggle="tab" data-bs-target="#nav-edu" type="button" role="tab" aria-controls="nav-edu" aria-selected="false" onclick="showPrevButton()">Education</button>
+              <button class="nav-link" id="nav-emp-tab" data-bs-toggle="tab" data-bs-target="#nav-emp" type="button" role="tab" aria-controls="nav-emp" aria-selected="false" onclick="showPrevButton()">Employment</button>
             </div>
         </nav>
 
@@ -88,7 +88,7 @@
         </div>
 
         <div style="margin: 15px; text-align: right;">
-            <button class="action_btn">PREVIOUS</button>
+            <button class="action_btn" id="prevBtn">PREVIOUS</button>
             <button class="action_btn" type="submit">SAVE & CLOSE</button>
             <button class="action_btn">NEXT</button>        
         </div>

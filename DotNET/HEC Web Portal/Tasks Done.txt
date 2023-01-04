@@ -6,6 +6,8 @@ Create HEC Profile Forms (Personal Details, Contact, Education, Employment) With
 - Add grid to display information
 - while user enter Date of Birth, Age Should be calculated automatically
 - User API for Country, State, City
+- Page Navigation
+- Hide prev video when personal details is on display
 
 - Upload /remove Picture (Done)
 - Show/Hide a section on button click (Done)
