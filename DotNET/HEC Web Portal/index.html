@@ -15,6 +15,7 @@
     
     <!--W3 CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <link rel="stylesheet" href="main_header_styles.css">
     <link rel="stylesheet" href="nav_bar_styles.css">
@@ -85,10 +86,38 @@
 
         <div style="margin: 15px; text-align: right;">
             <button class="action_btn" id="prevBtn">PREVIOUS</button>
-            <button class="action_btn" type="submit">SAVE & CLOSE</button>
+            <button class="action_btn" onclick="showGridDisplay()">SAVE & CLOSE</button>
             <button class="action_btn" id="nextBtn">NEXT</button>        
         </div>
-
+        
+        <div class="row" style="margin: 25px 5px 25px 5px;" id="gridContainer">
+            <div class="col-xxl-12">
+                <table class="w3-table w3-bordered w3-border">
+                    <tr>
+                        <th>Name</th>
+                        <td><input class="gridDisplay" value="Saba Yashfeen" id="gridName"></td>
+                        <th>Gender</th>
+                        <td><input class="gridDisplay" value="Female" id="gridGender"></td>
+                        <th>Date of Birth</th>
+                        <td><input class="gridDisplay" value="18/03/2000" id="gridDOB"></td>
+                        <th>Age</th>
+                        <td><input class="gridDisplay" value="22" id="gridAge"></td>
+                    </tr>
+                    <tr>
+                        <th>Religion</th>
+                        <td><input class="gridDisplay" value="Islam" id="gridReligion"></td>
+                        <th>Country</th>
+                        <td><input class="gridDisplay" value="Pakistan" id="gridCountry"></td>
+                        <th>Province</th>
+                        <td><input class="gridDisplay" value="Punjab" id="gridProvince"></td>
+                        <th>City</th>
+                        <td><input class="gridDisplay" value="Rawalpindi" id="gridCity"></td>
+                    </tr>
+                  </table>
+            </div>    
+            <button class="action_btn" style="margin:15px 15px 0px 15px; float: right;" onclick="hideSection('gridContainer'); return false;">CANCEL</button> 
+        </div>
+        <br>
     </div>
     <img class="signature" src="/media/signature.png" alt="Saba Yashfeen" style="margin: 0px 15px 15px 15px; float: right; height: 40px; width: auto;">
     <script src="script.js"></script>

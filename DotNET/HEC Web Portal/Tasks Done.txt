@@ -3,10 +3,10 @@ Create HEC Profile Forms (Personal Details, Contact, Education, Employment) With
 - Add Complete validation on all fields (Done)
 - Apply Input Masking e.g. CNIC, Mobile, Email (Done)
 
-- Add grid to display information
-- while user enter Date of Birth, Age Should be calculated automatically
-- Use API for Country, State, City
-- Page Navigation (giving errors)
+- Add grid to display information (Done)
+- while user enter Date of Birth, Age Should be calculated automatically (function not working)
+- Use API for Country, State, City (Not Done)
+- Page Navigation (giving errors hence removed)
 
 - Upload /remove Picture (Done)
 - Show/Hide a section on button click (Done)

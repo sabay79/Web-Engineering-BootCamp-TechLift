@@ -129,3 +129,8 @@ iframe{
 #iFrameEducation{
   height: 1300px;
 }
+
+.gridDisplay{
+  border: none;
+  padding: 0%;
+}
