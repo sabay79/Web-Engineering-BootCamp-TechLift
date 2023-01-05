@@ -2,6 +2,7 @@
 function resizeIframe(iFrameID) {
   $(iFrameID).height($(iFrameID).contents().height());
 }
+
 //Hide PREVIOUS button when personal details is on display //
 var prevBtn = document.getElementById("prevBtn");
 $(document).ready(function(){
@@ -52,7 +53,6 @@ $(document).ready(function(){
 function showSection(sectionID)
 {
   document.getElementById(sectionID).style.display = "block";
-  document.getElementById("iFrameEducation").style.height = '10000px';
   
 }
 ///Hide section on Button Click - Cancel Button
@@ -60,3 +60,5 @@ function hideSection(sectionID){
   let sectionToHide = document.getElementById(sectionID);
   sectionToHide.style.display = "none";
 }
+
+//Tab(Page) Navigation on button Click //
