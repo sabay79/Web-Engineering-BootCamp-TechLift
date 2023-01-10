@@ -5,9 +5,6 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;    
 }
-body{
-    justify-content: center;
-}
 form{
     margin: 25px;
     display: flex;
