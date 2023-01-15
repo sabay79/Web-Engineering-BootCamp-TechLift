@@ -5,13 +5,22 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="dd29577a1a714e4fbd98624a6ebed15e" Name="Diagram1" >
-        <EntityTypeShape EntityType="CourseERD.Course" Width="1.5" PointX="0.75" PointY="3.5" />
-        <EntityTypeShape EntityType="CourseERD.Content" Width="1.5" PointX="3.25" PointY="0.75" />
-        <EntityTypeShape EntityType="CourseERD.Content_Rating" Width="1.5" PointX="5.875" PointY="0.625" />
-        <EntityTypeShape EntityType="CourseERD.Content_Comment" Width="1.5" PointX="5.875" PointY="3.125" />
-        <EntityTypeShape EntityType="CourseERD.Course_Comments" Width="1.5" PointX="5.875" PointY="6" />
-        <EntityTypeShape EntityType="CourseERD.Person" Width="1.5" PointX="3.5" PointY="3.875" />
-        <EntityTypeShape EntityType="CourseERD.Author" Width="1.5" PointX="3.5" PointY="6.5" />
+        <EntityTypeShape EntityType="CourseERD.Course" Width="1.5" PointX="0.75" PointY="3" />
+        <EntityTypeShape EntityType="CourseERD.Content" Width="1.5" PointX="4.375" PointY="0.625" />
+        <EntityTypeShape EntityType="CourseERD.Content_Rating" Width="1.5" PointX="10.875" PointY="0.5" />
+        <EntityTypeShape EntityType="CourseERD.Content_Comment" Width="1.5" PointX="8" PointY="3.75" />
+        <EntityTypeShape EntityType="CourseERD.Course_Comments" Width="1.5" PointX="11" PointY="6.375" />
+        <EntityTypeShape EntityType="CourseERD.Person" Width="1.5" PointX="4.375" PointY="4.125" />
+        <EntityTypeShape EntityType="CourseERD.Author" Width="1.5" PointX="4.375" PointY="7.125" />
+        <AssociationConnector Association="CourseERD.CourseAuthor" />
+        <AssociationConnector Association="CourseERD.CourseContent" />
+        <AssociationConnector Association="CourseERD.CoursePerson" />
+        <AssociationConnector Association="CourseERD.CourseCourse_Comments" />
+        <AssociationConnector Association="CourseERD.ContentContent_Rating" />
+        <AssociationConnector Association="CourseERD.ContentContent_Comment" />
+        <AssociationConnector Association="CourseERD.PersonContent_Rating" />
+        <AssociationConnector Association="CourseERD.PersonCourse_Comments" />
+        <AssociationConnector Association="CourseERD.PersonContent_Comment" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

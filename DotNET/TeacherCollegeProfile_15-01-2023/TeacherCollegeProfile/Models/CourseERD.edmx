@@ -20,6 +20,42 @@
           <EntitySet Name="Course_Comments" EntityType="CourseERD.Course_Comments" />
           <EntitySet Name="People" EntityType="CourseERD.Person" />
           <EntitySet Name="Authors" EntityType="CourseERD.Author" />
+          <AssociationSet Name="CourseAuthor" Association="CourseERD.CourseAuthor">
+            <End Role="Course" EntitySet="Courses1" />
+            <End Role="Author" EntitySet="Authors" />
+          </AssociationSet>
+          <AssociationSet Name="CourseContent" Association="CourseERD.CourseContent">
+            <End Role="Course" EntitySet="Courses1" />
+            <End Role="Content" EntitySet="Contents1" />
+          </AssociationSet>
+          <AssociationSet Name="CoursePerson" Association="CourseERD.CoursePerson">
+            <End Role="Course" EntitySet="Courses1" />
+            <End Role="Person" EntitySet="People" />
+          </AssociationSet>
+          <AssociationSet Name="CourseCourse_Comments" Association="CourseERD.CourseCourse_Comments">
+            <End Role="Course" EntitySet="Courses1" />
+            <End Role="Course_Comments" EntitySet="Course_Comments" />
+          </AssociationSet>
+          <AssociationSet Name="ContentContent_Rating" Association="CourseERD.ContentContent_Rating">
+            <End Role="Content" EntitySet="Contents1" />
+            <End Role="Content_Rating" EntitySet="Content_Rating" />
+          </AssociationSet>
+          <AssociationSet Name="ContentContent_Comment" Association="CourseERD.ContentContent_Comment">
+            <End Role="Content" EntitySet="Contents1" />
+            <End Role="Content_Comment" EntitySet="Content_Comment" />
+          </AssociationSet>
+          <AssociationSet Name="PersonContent_Rating" Association="CourseERD.PersonContent_Rating">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Content_Rating" EntitySet="Content_Rating" />
+          </AssociationSet>
+          <AssociationSet Name="PersonCourse_Comments" Association="CourseERD.PersonCourse_Comments">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Course_Comments" EntitySet="Course_Comments" />
+          </AssociationSet>
+          <AssociationSet Name="PersonContent_Comment" Association="CourseERD.PersonContent_Comment">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Content_Comment" EntitySet="Content_Comment" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Course">
           <Key>
@@ -28,6 +64,10 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" />
           <Property Name="CreatedDate" Type="String" Nullable="false" />
+          <NavigationProperty Name="Authors" Relationship="CourseERD.CourseAuthor" FromRole="Course" ToRole="Author" />
+          <NavigationProperty Name="Contents" Relationship="CourseERD.CourseContent" FromRole="Course" ToRole="Content" />
+          <NavigationProperty Name="People" Relationship="CourseERD.CoursePerson" FromRole="Course" ToRole="Person" />
+          <NavigationProperty Name="Course_Comments" Relationship="CourseERD.CourseCourse_Comments" FromRole="Course" ToRole="Course_Comments" />
         </EntityType>
         <EntityType Name="Content">
           <Key>
@@ -40,6 +80,10 @@
           <Property Name="Description" Type="String" Nullable="false" />
           <Property Name="Summary" Type="String" Nullable="false" />
           <Property Name="CourseID" Type="String" Nullable="false" />
+          <NavigationProperty Name="Course" Relationship="CourseERD.CourseContent" FromRole="Content" ToRole="Course" />
+          <Property Name="CourseId1" Type="Int32" Nullable="true" />
+          <NavigationProperty Name="Content_Rating" Relationship="CourseERD.ContentContent_Rating" FromRole="Content" ToRole="Content_Rating" />
+          <NavigationProperty Name="Content_Comment" Relationship="CourseERD.ContentContent_Comment" FromRole="Content" ToRole="Content_Comment" />
         </EntityType>
         <EntityType Name="Content_Rating">
           <Key>
@@ -49,6 +93,11 @@
           <Property Name="PersonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ContentID" Type="String" Nullable="false" />
           <Property Name="Rating" Type="String" Nullable="false" />
+          <NavigationProperty Name="Content" Relationship="CourseERD.ContentContent_Rating" FromRole="Content_Rating" ToRole="Content" />
+          <Property Name="ContentId1" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="CourseERD.PersonContent_Rating" FromRole="Content_Rating" ToRole="Person" />
+          <Property Name="PersonId1" Type="Int32" Nullable="false" />
+          <Property Name="PersonId2" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Content_Comment">
           <Key>
@@ -59,6 +108,10 @@
           <Property Name="Comment" Type="String" Nullable="false" />
           <Property Name="CommentedDate" Type="String" Nullable="false" />
           <Property Name="PersonID" Type="String" Nullable="false" />
+          <NavigationProperty Name="Content" Relationship="CourseERD.ContentContent_Comment" FromRole="Content_Comment" ToRole="Content" />
+          <Property Name="ContentId1" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="CourseERD.PersonContent_Comment" FromRole="Content_Comment" ToRole="Person" />
+          <Property Name="PersonId1" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Course_Comments">
           <Key>
@@ -69,6 +122,10 @@
           <Property Name="Comment" Type="String" Nullable="false" />
           <Property Name="CommentedDate" Type="String" Nullable="false" />
           <Property Name="PersonID" Type="String" Nullable="false" />
+          <NavigationProperty Name="Course" Relationship="CourseERD.CourseCourse_Comments" FromRole="Course_Comments" ToRole="Course" />
+          <Property Name="CourseId1" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="CourseERD.PersonCourse_Comments" FromRole="Course_Comments" ToRole="Person" />
+          <Property Name="PersonId1" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Person">
           <Key>
@@ -79,6 +136,10 @@
           <Property Name="CurrentLogging" Type="String" Nullable="false" />
           <Property Name="Password" Type="String" Nullable="false" />
           <Property Name="Trails" Type="String" Nullable="false" />
+          <NavigationProperty Name="Courses" Relationship="CourseERD.CoursePerson" FromRole="Person" ToRole="Course" />
+          <NavigationProperty Name="Content_Rating" Relationship="CourseERD.PersonContent_Rating" FromRole="Person" ToRole="Content_Rating" />
+          <NavigationProperty Name="Course_Comments" Relationship="CourseERD.PersonCourse_Comments" FromRole="Person" ToRole="Course_Comments" />
+          <NavigationProperty Name="Content_Comment" Relationship="CourseERD.PersonContent_Comment" FromRole="Person" ToRole="Content_Comment" />
         </EntityType>
         <EntityType Name="Author">
           <Key>
@@ -86,7 +147,100 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" />
+          <NavigationProperty Name="Courses" Relationship="CourseERD.CourseAuthor" FromRole="Author" ToRole="Course" />
         </EntityType>
+        <Association Name="CourseAuthor">
+          <End Type="CourseERD.Course" Role="Course" Multiplicity="*" />
+          <End Type="CourseERD.Author" Role="Author" Multiplicity="*" />
+        </Association>
+        <Association Name="CourseContent">
+          <End Type="CourseERD.Course" Role="Course" Multiplicity="0..1" />
+          <End Type="CourseERD.Content" Role="Content" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Course">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Content">
+              <PropertyRef Name="CourseId1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CoursePerson">
+          <End Type="CourseERD.Course" Role="Course" Multiplicity="*" />
+          <End Type="CourseERD.Person" Role="Person" Multiplicity="*" />
+        </Association>
+        <Association Name="CourseCourse_Comments">
+          <End Type="CourseERD.Course" Role="Course" Multiplicity="1" />
+          <End Type="CourseERD.Course_Comments" Role="Course_Comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Course">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Course_Comments">
+              <PropertyRef Name="CourseId1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ContentContent_Rating">
+          <End Type="CourseERD.Content" Role="Content" Multiplicity="1" />
+          <End Type="CourseERD.Content_Rating" Role="Content_Rating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Content">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Content_Rating">
+              <PropertyRef Name="ContentId1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ContentContent_Comment">
+          <End Type="CourseERD.Content" Role="Content" Multiplicity="1" />
+          <End Type="CourseERD.Content_Comment" Role="Content_Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Content">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Content_Comment">
+              <PropertyRef Name="ContentId1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PersonContent_Rating">
+          <End Type="CourseERD.Person" Role="Person" Multiplicity="1" />
+          <End Type="CourseERD.Content_Rating" Role="Content_Rating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Content_Rating">
+              <PropertyRef Name="PersonId1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PersonCourse_Comments">
+          <End Type="CourseERD.Person" Role="Person" Multiplicity="1" />
+          <End Type="CourseERD.Course_Comments" Role="Course_Comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Course_Comments">
+              <PropertyRef Name="PersonId1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PersonContent_Comment">
+          <End Type="CourseERD.Person" Role="Person" Multiplicity="1" />
+          <End Type="CourseERD.Content_Comment" Role="Content_Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Content_Comment">
+              <PropertyRef Name="PersonId1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
