@@ -42,17 +42,10 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.Gender, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.DropDownListFor(model => model.Gender, ViewBag.genderList as SelectList, new { @class = "form-control" } )
             @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
         </div>
     </div>
-
-    <select class="form-select" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-    </select>
 
     <div class="form-group">
         @Html.LabelFor(model => model.CNIC, htmlAttributes: new { @class = "control-label col-md-2" })

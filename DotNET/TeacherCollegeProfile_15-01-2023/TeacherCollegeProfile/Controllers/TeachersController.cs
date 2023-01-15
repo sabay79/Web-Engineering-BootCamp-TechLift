@@ -38,6 +38,21 @@ namespace TeacherCollegeProfile.Controllers
         // GET: Teachers/Create
         public ActionResult Create()
         {
+            List<SelectListItem> genderList = new List<SelectListItem>
+            {
+                new SelectListItem
+                {
+                    Text = "Female",
+                    Value = "Female"
+                },
+                new SelectListItem
+                {
+                    Text = "Male",
+                    Value = "Male"
+                }
+            };
+            ViewBag.Gender = genderList;
+
             return View();
         }
 
