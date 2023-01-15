@@ -134,10 +134,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\CourseModelERD.Designer.cs">
+    <Compile Include="Models\CourseERD.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CourseModelERD.edmx</DependentUpon>
+      <DependentUpon>CourseERD.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Teacher.cs">
       <DependentUpon>TeacherModel.tt</DependentUpon>
@@ -187,12 +187,12 @@
     <Content Include="Models\TeacherModel.edmx.diagram">
       <DependentUpon>TeacherModel.edmx</DependentUpon>
     </Content>
-    <EntityDeploy Include="Models\CourseModelERD.edmx">
+    <EntityDeploy Include="Models\CourseERD.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>CourseModelERD.Designer.cs</LastGenOutput>
+      <LastGenOutput>CourseERD.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\CourseModelERD.edmx.diagram">
-      <DependentUpon>CourseModelERD.edmx</DependentUpon>
+    <Content Include="Models\CourseERD.edmx.diagram">
+      <DependentUpon>CourseERD.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
