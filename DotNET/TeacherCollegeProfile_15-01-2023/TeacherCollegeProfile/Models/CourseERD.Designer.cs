@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\yashfsab\Source\Repos\sabay79\Web-Engineering-BootCamp-TechLift\DotNET\TeacherCollegeProfile_15-01-2023\TeacherCollegeProfile\Models\CourseERD.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Saba\source\repos\Web-Engineering-BootCamp-TechLift\DotNET\TeacherCollegeProfile_15-01-2023\TeacherCollegeProfile\Models\CourseERD.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
