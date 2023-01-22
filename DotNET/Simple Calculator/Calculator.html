@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="CalculatorStyle.css"/>
+    <title>Calculator</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form1">
+            <!--I/O Screen-->
+            <input id="ip" type="text" readonly=""> <br> <br>
+
+            <!--Buttons-->
+            <button onclick="enter(7)">7</button>
+            <button onclick="enter(8)">8</button>
+            <button onclick="enter(9)">9</button>
+            <button onclick="enter('/')">/</button>
+            <br><br>
+            <button onclick="enter(4)">4</button>
+            <button onclick="enter(5)">5</button>
+            <button onclick="enter(6)">6</button>
+            <button onclick="enter('*')">*</button>
+            <br><br>
+            <button onclick="enter(1)">1</button>
+            <button onclick="enter(2)">2</button>
+            <button onclick="enter(3)">3</button>
+            <button onclick="enter('+')">+</button> 
+            <br><br>
+            <button onclick="enter('.')">.</button>
+            <button onclick="enter(0)">0</button>
+            <button onclick="exe()">=</button>
+            <button onclick="enter('-')">-</button>
+            <br><br>
+            <button id="clear" onclick="cls()">Clear All</button>
+       
+        </div>
+    </div>
+    <script>
+        let val = document.getElementById("ip");
+
+        function enter(v)
+        {
+            val.value += v;
+        }
+
+        function exe()
+        {
+            val.value = eval(val.value);
+        }
+
+        function cls()
+        {
+            val.value = "";
+        }
+    </script>
+</body>
+</html>
