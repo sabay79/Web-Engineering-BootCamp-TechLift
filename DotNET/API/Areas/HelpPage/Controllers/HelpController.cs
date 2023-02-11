@@ -1,8 +1,8 @@
+using Api.Areas.HelpPage.ModelDescriptions;
+using Api.Areas.HelpPage.Models;
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using Api.Areas.HelpPage.ModelDescriptions;
-using Api.Areas.HelpPage.Models;
 
 namespace Api.Areas.HelpPage.Controllers
 {
