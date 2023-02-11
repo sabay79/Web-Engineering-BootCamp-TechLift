@@ -25,6 +25,7 @@ namespace Api.Controllers
         [HttpGet]
         [ResponseType(typeof(Employee))]
         [Route("SpecificEmployee")]
+        // https://localhost:44346/api/Emp/SpecificEmployee?id=1&state=browser
         public async Task<IHttpActionResult> GetEmployee(int id, string state)
         {
             Employee employee = await db.Employees.FindAsync(id);
