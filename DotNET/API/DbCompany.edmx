@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DBCompanyModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DBCompanyModelStoreContainer">
+    <EntitySet Name="Employees" EntityType="DBCompanyModel.Store.Employees" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblEmployees" EntityType="DBCompanyModel.Store.tblEmployees" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Incentives" EntityType="DBCompanyModel.Store.Incentives" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="EMPLOYEE_ID" />
+    </Key>
+    <Property Name="EMPLOYEE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FIRST_NAME" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="LAST_NAME" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="SALARY" Type="int" Nullable="true" />
+    <Property Name="JOINING_DATE" Type="nvarchar" Nullable="true" MaxLength="100" />
+    <Property Name="DEPARTMENT" Type="nvarchar" Nullable="true" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tblEmployees">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="20" />
+    <Property Name="ManagerId" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Incentives">
+    <Key>
+      <PropertyRef Name="EMPLOYEE_REF_ID" />
+    </Key>
+    <Property Name="EMPLOYEE_REF_ID" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="INCENTIVE_DATE" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="INCENTIVE_AMOUNT" Type="int" Nullable="true" />
+    <Property Name="Total" Type="int" Nullable="true" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBCompanyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EMPLOYEE_ID" />
+          </Key>
+          <Property Name="EMPLOYEE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FIRST_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LAST_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SALARY" Type="Int32" />
+          <Property Name="JOINING_DATE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DEPARTMENT" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblEmployee">
+          <Key>
+            <PropertyRef Name="EmployeeId" />
+          </Key>
+          <Property Name="EmployeeId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ManagerId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Incentive">
+          <Key>
+            <PropertyRef Name="EMPLOYEE_REF_ID" />
+          </Key>
+          <Property Name="EMPLOYEE_REF_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="INCENTIVE_DATE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INCENTIVE_AMOUNT" Type="Int32" />
+          <Property Name="Total" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="DBCompanyEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="tblEmployees" EntityType="Self.tblEmployee" />
+          <EntitySet Name="Incentives" EntityType="Self.Incentive" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBCompanyModelStoreContainer" CdmEntityContainer="DBCompanyEntities">
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="IsTypeOf(DBCompanyModel.Employee)">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="EMPLOYEE_ID" ColumnName="EMPLOYEE_ID" />
+          <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+          <ScalarProperty Name="SALARY" ColumnName="SALARY" />
+          <ScalarProperty Name="JOINING_DATE" ColumnName="JOINING_DATE" />
+          <ScalarProperty Name="DEPARTMENT" ColumnName="DEPARTMENT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmployees">
+      <EntityTypeMapping TypeName="IsTypeOf(DBCompanyModel.tblEmployee)">
+        <MappingFragment StoreEntitySet="tblEmployees">
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ManagerId" ColumnName="ManagerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Incentives">
+      <EntityTypeMapping TypeName="IsTypeOf(DBCompanyModel.Incentive)">
+        <MappingFragment StoreEntitySet="Incentives">
+          <ScalarProperty Name="EMPLOYEE_REF_ID" ColumnName="EMPLOYEE_REF_ID" />
+          <ScalarProperty Name="INCENTIVE_DATE" ColumnName="INCENTIVE_DATE" />
+          <ScalarProperty Name="INCENTIVE_AMOUNT" ColumnName="INCENTIVE_AMOUNT" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
