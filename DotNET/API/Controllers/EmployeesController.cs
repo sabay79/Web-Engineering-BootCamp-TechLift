@@ -1,10 +1,15 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
+using Api;
 
 namespace Api.Controllers
 {
@@ -16,6 +21,7 @@ namespace Api.Controllers
         // GET: api/Employees
         [HttpGet]
         [Route("AllEmployee")]
+        //https://localhost:44346/api/Emp/AllEmployee
         public IQueryable<Employee> GetEmployees()
         {
             return db.Employees;
@@ -25,8 +31,8 @@ namespace Api.Controllers
         [HttpGet]
         [ResponseType(typeof(Employee))]
         [Route("SpecificEmployee")]
-        // https://localhost:44346/api/Emp/SpecificEmployee?id=1&state=browser
-        public async Task<IHttpActionResult> GetEmployee(int id, string state)
+        //https://localhost:44346/api/Emp/SpecificEmployee?id=1&state=browser
+        public async Task<IHttpActionResult> GetEmployee(int id,string state)
         {
             Employee employee = await db.Employees.FindAsync(id);
             if (employee == null)
@@ -39,9 +45,9 @@ namespace Api.Controllers
 
         // PUT: api/Employees/5
         [HttpPut]
-        [ResponseType(typeof(void))]
+        [ResponseType(typeof(Employee))]
         [Route("UpdateEmployee")]
-        public async Task<IHttpActionResult> PutEmployee(int id, Employee employee)
+        public async Task<IHttpActionResult> PutEmployee([FromUri]int id, [FromBody]Employee employee)
         {
             if (!ModelState.IsValid)
             {
@@ -70,15 +76,15 @@ namespace Api.Controllers
                     throw;
                 }
             }
-
-            return StatusCode(HttpStatusCode.NoContent);
+            return Ok(employee);
+            //return StatusCode(HttpStatusCode.NoContent);
         }
 
         // POST: api/Employees
         [HttpPost]
         [ResponseType(typeof(Employee))]
         [Route("AddEmployee")]
-        public async Task<IHttpActionResult> PostEmployee(Employee employee)
+        public async Task<IHttpActionResult> PostEmployee([FromBody] Employee employee)
         {
             if (!ModelState.IsValid)
             {
@@ -88,7 +94,8 @@ namespace Api.Controllers
             db.Employees.Add(employee);
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = employee.EMPLOYEE_ID }, employee);
+            return Ok(employee);
+            //return CreatedAtRoute("DefaultApi", new { id = employee.EMPLOYEE_ID }, employee);
         }
 
         // DELETE: api/Employees/5
